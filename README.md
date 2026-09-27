@@ -1,56 +1,57 @@
 # Portfolio de Henintsoa Andrianina Mampiononaritina
 
-Site statique en HTML, CSS et JavaScript, sans installation ni compilation. Il se déploie tel quel sur Netlify.
+Site statique en HTML, CSS et JavaScript uniquement. Pas de framework, pas d'installation, pas de commande à lancer : ces fichiers sont le site fini, prêts à héberger tels quels.
 
 ## Structure
 
 ```
-index.html       Accueil (présentation, projets récents, stack)
-about.html       À propos (présentation, formation, parcours)
+index.html       Accueil
+apropos.html     À propos
 skills.html      Compétences
 projects.html    Projets
-services.html    Services (à garder ou à supprimer)
+services.html    Services
 contact.html     Contact (formulaire Netlify Forms)
 merci.html       Page affichée après l'envoi du formulaire
-404.html         Page « introuvable » (utilisée automatiquement par Netlify)
+404.html         Page « introuvable »
 css/style.css    Styles et couleurs de tout le site
-js/main.js       Thème clair/sombre, menu mobile, pile 3D de l'accueil
-assets/          Images (favicon, portrait, captures d'écran)
+js/main.js       Thème clair/sombre, menu mobile
+assets/          Favicon, photo, portrait
 ```
+
+Chaque page contient son propre `<head>` et son propre `<header>` : c'est du HTML simple, sans étape de fabrication.
 
 ## Voir le site sur votre ordinateur
 
-Double-cliquez sur `index.html`. Le formulaire de contact ne fonctionne qu'une fois le site en ligne sur Netlify.
+Les liens du site commencent par `/` (ex. `/contact.html`), ce qui est la bonne pratique pour un hébergement comme Netlify, mais cela veut dire qu'un simple double-clic sur `index.html` ne fonctionnera pas correctement pour naviguer entre les pages (le navigateur cherche `/contact.html` à la racine de votre disque). Pour prévisualiser correctement :
 
-## Compléter vos informations, page par page
+- **Le plus simple** : dans VS Code, installez l'extension « Live Server », clic droit sur `index.html`, « Open with Live Server ».
+- **Sans VS Code** : ouvrez un terminal dans ce dossier et lancez `python3 -m http.server`, puis ouvrez `http://localhost:8000` dans le navigateur.
 
-Cherchez `À COMPLÉTER` dans le code (Ctrl + Maj + F dans VS Code). Ces commentaires indiquent chaque endroit à modifier. Les textes entre crochets, comme `[période]`, sont à remplacer par vos vraies informations.
+Une fois déployé sur Netlify, tout fonctionne normalement sans rien de spécial à faire.
 
-Ordre conseillé :
+## Compléter vos informations
 
-1. `contact.html` : votre adresse e-mail et votre lien LinkedIn.
-2. `about.html` : votre photo (remplacez `assets/profil.svg`), votre parcours, vos dates et vos postes.
-3. `projects.html` : le contexte, votre rôle et le résultat de chaque projet. Pour une vraie capture d'écran, mettez l'image dans `assets/` et remplacez le `<svg>` de la zone `cover` par `<img src="assets/mon-projet.png" alt="...">`.
-4. `skills.html` : ajustez la liste des technologies.
-5. `services.html` : gardez, modifiez ou supprimez les services et ajoutez vos tarifs. Si vous supprimez la page, retirez aussi son lien du menu dans chaque fichier HTML.
-6. `index.html` : le texte d'accueil et le badge de disponibilité.
+Cherchez `À COMPLÉTER` dans les fichiers `.html` (Ctrl + Maj + F dans VS Code). Ordre conseillé :
 
-Le menu et le pied de page sont répétés dans chaque fichier HTML. Si vous ajoutez une page, copiez-les.
+1. `contact.html` : votre e-mail et votre lien LinkedIn.
+2. `apropos.html` : vos dates et vos postes (la photo est déjà en place).
+3. `projects.html` : le détail de chaque projet, avec une vraie capture d'écran si possible.
+4. `skills.html` et `services.html` : ajustez les listes.
+
+Pour changer le numéro WhatsApp, remplacez `261343846949` dans `index.html`, `apropos.html`, `skills.html`, `projects.html`, `services.html`, `contact.html`, `merci.html` et `404.html` (le bouton de l'en-tête et la bulle flottante du pied de page, sur chaque page — cherchez `wa.me`).
 
 ## Changer les couleurs
 
-Modifiez les variables au début de `css/style.css` (`--violet`, `--mint`, `--sun`, `--ink`, `--bg`).
+Modifiez les variables au début de `css/style.css` (`--violet`, `--mint`, `--sun`, `--whatsapp`, `--ink`, `--bg`).
 
 ## Déployer sur Netlify
 
-**Option 1, la plus rapide** : sur https://app.netlify.com/drop, glissez le dossier du projet.
+**Le plus rapide** : sur https://app.netlify.com/drop, glissez ce dossier.
 
-**Option 2, recommandée** : mettez le projet sur GitHub, puis sur Netlify choisissez « Add new site », « Import an existing project » et sélectionnez le dépôt. Laissez la commande de build vide et indiquez `.` comme dossier de publication. Chaque `git push` met le site à jour.
+**Recommandé** : mettez le dossier sur GitHub, puis sur Netlify choisissez « Add new site », « Import an existing project », sélectionnez le dépôt, laissez la commande de build vide et indiquez `.` comme dossier de publication.
 
-Après le premier déploiement, allez dans l'onglet « Forms » de Netlify pour voir les messages reçus. Vous pouvez y activer une notification par e-mail.
+Après le déploiement, l'onglet « Forms » de Netlify affiche les messages reçus via `contact.html`.
 
-## Améliorations possibles
+## Photo
 
-- Un nom de domaine personnalisé (Netlify, « Domain management »).
-- Des captures d'écran réelles et des liens vers les démonstrations en ligne.
-- Un bouton WhatsApp ou LinkedIn dans la page Contact.
+La photo (`assets/photo-henintsoa.jpg`) vient d'un fichier Word et ne fait que 94 × 94 pixels. Remplacez-la par le fichier d'origine, en gardant le même nom, dès que vous l'avez — rien d'autre à changer.
