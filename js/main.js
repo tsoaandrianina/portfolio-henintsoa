@@ -32,6 +32,9 @@
   if (mq.addEventListener) mq.addEventListener('change', refreshTheme);
   refreshTheme();
 
+  const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+
   /* ---------- Menu mobile ---------- */
   var menuBtn = document.getElementById('menuBtn');
   var nav = document.getElementById('siteNav');
