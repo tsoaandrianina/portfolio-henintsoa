@@ -318,6 +318,13 @@ h2 { font-size: clamp(1.5rem, 3.4vw, 2.3rem); line-height: 1.15; }
   color: rgba(255, 255, 255, 0.08);
   pointer-events: none; user-select: none;
 }
+/* Capture d'écran encadrée dans la zone colorée */
+/* .cover.photo { padding: 0% 0%; }
+.cover.photo img {
+  object-position: top;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+} */
 
 /* ---------- Services ---------- */
 .service-grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
